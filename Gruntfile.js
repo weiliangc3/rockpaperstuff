@@ -16,23 +16,23 @@ module.exports = function(grunt){
         options: {
           outputStyle: "expanded"
         },
-        files: { "app/css/app.css": "src/scss/app.scss" }
+        files: { "public/css/app.css": "src/scss/app.scss" }
       },
       compressed: {
         options: {
           outputStyle: "compressed"
         },
-        files: { "app/css/app.min.css": "src/scss/app.scss" }
+        files: { "public/css/app.min.css": "src/scss/app.scss" }
       }
     },
     concat: {
       dist: {
         src: ['src/js/_bower.js','src/js/app.js', 'src/js/**/*.js'],
-        dest: "app/js/app.js"
+        dest: "public/js/app.js"
       },
     },
     uglify: {
-      'app/js/app.min.js': 'app/js/app.js',
+      'public/js/app.min.js': 'public/js/app.js',
     },
     watch: {
       configFiles: {
@@ -50,7 +50,7 @@ module.exports = function(grunt){
         options: { livereload: true }
       },
       index: {
-        files: ['app/index.html'],
+        files: ['public/views/index.html'],
         options: { livereload: true }
       }
     }
