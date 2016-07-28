@@ -25,3 +25,9 @@ I'm used to AngularJS 1.X so I chose to use that rather than Angular 2 or React.
 I chose not to display what beats what on the game picking screen.
 
 I thought about using another controller to handle the game rather than a 'Main' controller, but it felt really contrived considering that the only purpose of the app is the game itself.
+
+Victory conditions were coded as an object, so that the way the code works is clear. Wikipedia describes a cool mathematical solution, but I shyed from it in favour of code readability.
+
+I considered not having an intermediary screen for each round- but I chose to have one just to display computer results more obviously. I think not having an intermediary screen is a better decision in terms of playing the game, and is more 'fun'. But as this project isn't to make a game for others' 'fun'...
+
+I actually also considered writing all the "Paper beats rock", "Lizard poisons Spock"... but I felt that it was time consuming to write and not really challenging - though it is a significant game quality improvement.

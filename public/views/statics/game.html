@@ -1,1 +1,53 @@
 <h2>Game on!</h2>
+
+<div class="scoretracker">
+  <div class="scoretracker__round" ng-class="Main.roundDisplayClass(0)">
+    <span/>
+  </div>
+  <div class="scoretracker__round" ng-class="Main.roundDisplayClass(1)">
+    <span/>
+  </div>
+  <div class="scoretracker__round" ng-class="Main.roundDisplayClass(2)">
+    <span/>
+  </div>
+  <button type="button" name="button" class="scoretracker__reset" ng-click="Main.resetGame()">Reset Game?</button>
+</div>
+
+<div class="roundongoing" ng-if="Main.roundOngoing">
+  <p>
+    What will you choose?
+  </p>
+  <button class="button roundongoing__rock" ng-click="Main.makeMove('rock')">
+    Rock
+  </button>
+  <button class="button roundongoing__paper" ng-click="Main.makeMove('paper')">
+    Paper
+  </button>
+  <button class="button roundongoing__scissors" ng-click="Main.makeMove('scissors')">
+    Scissors
+  </button>
+  <button class="button roundongoing__lizard" ng-click="Main.makeMove('lizard')">
+    Lizard
+  </button>
+  <button class="button roundongoing__spock" ng-click="Main.makeMove('spock')">
+    Spock
+  </button>
+</div>
+
+<div class="roundover" ng-if="!Main.roundOngoing">
+  <div class="roundover__computerscore">
+    The computer played {{Main.computerMove}}
+  </div>
+  <div class="roundover__playerscore">
+    You played {{Main.playerMove}}
+  </div>
+  <div class="roundover__result">
+    <p ng-if="Main.roundDraw">
+      Draw round- round will be replayed
+    </p>
+    <p ng-if="!Main.roundDraw">
+      The {{Main.roundWinner[Main.roundWinner.length-1]}} took the round!
+    </p>
+    <button type="roundover__continue" ng-click="Main.nextRound() ">Continue</button>
+  </div>
+</div>

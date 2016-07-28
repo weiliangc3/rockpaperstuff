@@ -1,5 +1,9 @@
 <h2>Results</h2>
 
-<div class="button">
+<p>
+  The {{Main.winner}} has won with a score of {{Main.countPlayerWins()}} to {{3-Main.countPlayerWins()}}
+</p>
+
+<button class="button" ng-click="Main.resetGame()" ui-sref="game">
   Play again?
-</div>
+</button>
