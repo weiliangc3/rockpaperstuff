@@ -4,7 +4,7 @@ A Rock Paper Scissors Spock and Lizard page.
 ## Instructions
 Run app.js to serve the page, then just go to localhost:3000 to view the page.
 
-I use Grunt to compile my javascript and SCSS (mostly because I prefer to use SCSS). The uncompiled code is in the src folder. The html pages are in app/views.
+I use Grunt to compile my javascript and SCSS (mostly because I prefer to use SCSS). The uncompiled code is in the src folder. The html pages are in public/views.
 
 ## Goals
 Make a playable computer opponent RPS, with the additional weapons of Spock and Lizard, as per the rules layed out in the wikipedia page. Additional functions were:
