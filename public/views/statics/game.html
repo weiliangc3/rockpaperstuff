@@ -1,6 +1,32 @@
 <h2>Game on!</h2>
 
 <div class="scoretracker">
+  <table class="scoretracker__table">
+    <tr>
+      <td>
+        Computer
+      </td>
+      <td>
+        {{Main.roundWinner.length-Main.countPlayerWins()}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Player
+      </td>
+      <td>
+        {{Main.countPlayerWins()}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Rounds played
+      </td>
+      <td>
+        {{Main.roundsPlayed}}
+      </td>
+    </tr>
+  </table>
   <div class="scoretracker__round" ng-class="Main.roundDisplayClass(0)">
     <span/>
   </div>
@@ -17,21 +43,18 @@
   <p>
     What will you choose?
   </p>
-  <button class="button roundongoing__rock" ng-click="Main.makeMove('rock')">
-    Rock
-  </button>
-  <button class="button roundongoing__paper" ng-click="Main.makeMove('paper')">
-    Paper
-  </button>
-  <button class="button roundongoing__scissors" ng-click="Main.makeMove('scissors')">
-    Scissors
-  </button>
-  <button class="button roundongoing__lizard" ng-click="Main.makeMove('lizard')">
-    Lizard
-  </button>
-  <button class="button roundongoing__spock" ng-click="Main.makeMove('spock')">
-    Spock
-  </button>
+  <p>
+    <button class="button roundongoing__button roundongoing__button--rock" ng-click="Main.makeMove('rock')">
+    </button>
+    <button class="button roundongoing__button roundongoing__button--paper" ng-click="Main.makeMove('paper')">
+    </button>
+    <button class="button roundongoing__button roundongoing__button--scissors" ng-click="Main.makeMove('scissors')">
+    </button>
+    <button class="button roundongoing__button roundongoing__button--lizard" ng-click="Main.makeMove('lizard')">
+    </button>
+    <button class="button roundongoing__button roundongoing__button--spock" ng-click="Main.makeMove('spock')">
+    </button>
+  </p>
 </div>
 
 <div class="roundover" ng-if="!Main.roundOngoing">

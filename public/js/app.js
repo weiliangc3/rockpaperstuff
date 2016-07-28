@@ -36343,7 +36343,7 @@ angular.module('ui.router.state')
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
 angular
-  .module('RockPaperStuff', ['ui.router', "ngAnimate"])
+  .module('RockPaperStuff', ['ui.router'])
   .config(MainRouter);
 
 MainRouter.$inject = ['$stateProvider','$urlRouterProvider', "$locationProvider"];
@@ -36356,15 +36356,15 @@ function MainRouter($stateProvider, $urlRouterProvider, $locationProvider){
       templateUrl: "/views/statics/home.html"
     })
     .state('game', {
-      url: "/",
+      url: "/game",
       templateUrl: "/views/statics/game.html"
     })
     .state('results', {
-      url: "/",
+      url: "/results",
       templateUrl: "/views/statics/results.html"
     })
     .state('rules', {
-      url: "/",
+      url: "/rules",
       templateUrl: "/views/statics/rules.html"
     });
 

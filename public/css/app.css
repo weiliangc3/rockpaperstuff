@@ -1,10 +1,9 @@
 body {
-  background: #BFBFBE;
+  background: #E6E6E6;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 button {
-  font-size: 1.5em;
   padding: 10px;
   background: #2E57B4;
   border: none;
@@ -30,85 +29,163 @@ h2 {
 }
 
 div.home {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 div.home button.home__button {
   padding: 10px;
+  font-size: 1.5em;
 }
 
-.scoretracker__round--unplayed {
+div.rules article.rules__article {
+  padding: 2em;
+  font-style: italic;
+  text-align: center;
+}
+
+div.scoretracker {
+  text-align: center;
+  position: relative;
+}
+
+div.scoretracker table.scoretracker__table {
+  position: absolute;
+  right: 0;
+  background-color: #B8DED6;
+}
+
+div.scoretracker button.scoretracker__reset {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+div.scoretracker .scoretracker__round--unplayed {
   display: inline-block;
   margin: 20px 10px 10px;
 }
 
-.scoretracker__round--unplayed span {
+div.scoretracker .scoretracker__round--unplayed span {
   display: inline-block;
-  background: #e6e6e6;
-  width: 5px;
-  height: 5px;
+  background: white;
+  width: 20px;
+  height: 20px;
   text-align: center;
   vertical-align: middle;
-  -webkit-box-shadow: 0 0 10px #e6e6e6;
-  -moz-box-shadow: 0 0 10px #e6e6e6;
-  box-shadow: 0 0 10px #e6e6e6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+  -webkit-box-shadow: 0 0 40px white;
+  -moz-box-shadow: 0 0 40px white;
+  box-shadow: 0 0 40px white;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
 }
 
-.scoretracker__round--active {
+div.scoretracker .scoretracker__round--active {
   display: inline-block;
   margin: 20px 10px 10px;
 }
 
-.scoretracker__round--active span {
+div.scoretracker .scoretracker__round--active span {
   display: inline-block;
-  background: #e6e6e6;
-  width: 5px;
-  height: 5px;
+  background: yellow;
+  width: 20px;
+  height: 20px;
   text-align: center;
   vertical-align: middle;
-  -webkit-box-shadow: 0 0 10px #e6e6e6;
-  -moz-box-shadow: 0 0 10px #e6e6e6;
-  box-shadow: 0 0 10px #e6e6e6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+  -webkit-box-shadow: 0 0 40px yellow;
+  -moz-box-shadow: 0 0 40px yellow;
+  box-shadow: 0 0 40px yellow;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
 }
 
-.scoretracker__round--player {
+div.scoretracker .scoretracker__round--player {
   display: inline-block;
   margin: 20px 10px 10px;
 }
 
-.scoretracker__round--player span {
+div.scoretracker .scoretracker__round--player span {
   display: inline-block;
   background: green;
-  width: 5px;
-  height: 5px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   vertical-align: middle;
-  -webkit-box-shadow: 0 0 10px green;
-  -moz-box-shadow: 0 0 10px green;
-  box-shadow: 0 0 10px green;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+  -webkit-box-shadow: 0 0 40px green;
+  -moz-box-shadow: 0 0 40px green;
+  box-shadow: 0 0 40px green;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
 }
 
-.scoretracker__round--computer {
+div.scoretracker .scoretracker__round--computer {
   display: inline-block;
   margin: 20px 10px 10px;
 }
 
-.scoretracker__round--computer span {
+div.scoretracker .scoretracker__round--computer span {
   display: inline-block;
   background: red;
-  width: 5px;
-  height: 5px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   vertical-align: middle;
-  -webkit-box-shadow: 0 0 10px red;
-  -moz-box-shadow: 0 0 10px red;
-  box-shadow: 0 0 10px red;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+  -webkit-box-shadow: 0 0 40px red;
+  -moz-box-shadow: 0 0 40px red;
+  box-shadow: 0 0 40px red;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+}
+
+div.roundongoing p {
+  text-align: center;
+}
+
+div.roundongoing button.roundongoing__button {
+  margin: 20px;
+  background-color: transparent;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+}
+
+div.roundongoing button.roundongoing__button:hover {
+  -webkit-box-shadow: 0 0 120px #132F53;
+  -moz-box-shadow: 0 0 120px #132F53;
+  box-shadow: 0 0 120px #132F53;
+}
+
+div.roundongoing button.roundongoing__button--rock {
+  background-image: url("/images/rock.png");
+}
+
+div.roundongoing button.roundongoing__button--paper {
+  background-image: url("/images/paper.png");
+}
+
+div.roundongoing button.roundongoing__button--scissors {
+  background-image: url("/images/scissors.png");
+}
+
+div.roundongoing button.roundongoing__button--lizard {
+  background-image: url("/images/lizard.png");
+}
+
+div.roundongoing button.roundongoing__button--spock {
+  background-image: url("/images/spock.png");
+}
+
+div.roundover {
+  margin: 20px;
+  text-align: center;
+}
+
+div.results div.results__message {
+  margin: 20px;
+  text-align: center;
 }

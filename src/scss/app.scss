@@ -1,10 +1,9 @@
 // Universal CSS
 body{
-  background: #BFBFBE;
+  background: #E6E6E6;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 button{
-  font-size: 1.5em;
   padding: 10px;
   background: #2E57B4;
   border: none;
@@ -25,101 +24,168 @@ h2{
   text-align: center;
 }
 
-
 // Main page CSS
 div.home{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   text-align: center;
   button.home__button{
-    padding: 10px
+    padding: 10px;
+    font-size: 1.5em;
   }
 }
 
+// Rules CSS
+div.rules{
+  article.rules__article{
+    padding: 2em;
+    font-style: italic;
+    text-align: center;
+  }
+}
 
-
-
-
-
-
-
-
-
+// Game CSS
 $player-color: green;
 $computer-color: red;
-$unplayed-color: lighten(silver,15%);
-$active-color: lighten(silver,15%);
-.scoretracker__round--unplayed{
-  display: inline-block;
-  margin: 20px 10px 10px;
-  span{
+$unplayed-color: white;
+$active-color: yellow;
+
+div.scoretracker{
+  text-align: center;
+  position: relative;
+  table.scoretracker__table{
+    position: absolute;
+    right:0;
+    background-color: #B8DED6
+  }
+  button.scoretracker__reset{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+  .scoretracker__round--unplayed{
     display: inline-block;
-    background: $unplayed-color;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    vertical-align: middle;
+    margin: 20px 10px 10px;
+    span{
+      display: inline-block;
+      background: $unplayed-color;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
 
-    -webkit-box-shadow: 0 0 10px $unplayed-color;
-       -moz-box-shadow: 0 0 10px $unplayed-color;
-            box-shadow: 0 0 10px $unplayed-color;
+      -webkit-box-shadow: 0 0 40px $unplayed-color;
+         -moz-box-shadow: 0 0 40px $unplayed-color;
+              box-shadow: 0 0 40px $unplayed-color;
 
-    -webkit-border-radius: 20px;
-       -moz-border-radius: 20px;
+      -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+    }
+  }
+  .scoretracker__round--active{
+    display: inline-block;
+    margin: 20px 10px 10px;
+    span{
+      display: inline-block;
+      background: $active-color;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
+
+      -webkit-box-shadow: 0 0 40px $active-color;
+         -moz-box-shadow: 0 0 40px $active-color;
+              box-shadow: 0 0 40px $active-color;
+
+      -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+    }
+  }
+  .scoretracker__round--player{
+    display: inline-block;
+    margin: 20px 10px 10px;
+    span{
+      display: inline-block;
+      background: $player-color;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
+
+      -webkit-box-shadow: 0 0 40px $player-color;
+         -moz-box-shadow: 0 0 40px $player-color;
+              box-shadow: 0 0 40px $player-color;
+
+      -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+    }
+  }
+  .scoretracker__round--computer{
+    display: inline-block;
+    margin: 20px 10px 10px;
+    span{
+      display: inline-block;
+      background: $computer-color;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
+
+      -webkit-box-shadow: 0 0 40px $computer-color;
+         -moz-box-shadow: 0 0 40px $computer-color;
+              box-shadow: 0 0 40px $computer-color;
+
+      -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+    }
   }
 }
-.scoretracker__round--active{
-  display: inline-block;
-  margin: 20px 10px 10px;
-  span{
-    display: inline-block;
-    background: $active-color;
-    width: 5px;
-    height: 5px;
+div.roundongoing{
+  p{
     text-align: center;
-    vertical-align: middle;
-
-    -webkit-box-shadow: 0 0 10px $active-color;
-       -moz-box-shadow: 0 0 10px $active-color;
-            box-shadow: 0 0 10px $active-color;
-
-    -webkit-border-radius: 20px;
-       -moz-border-radius: 20px;
+  }
+  button.roundongoing__button{
+    margin: 20px;
+    background-color: transparent;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    &:hover{
+      -webkit-box-shadow: 0 0 120px #132F53;
+         -moz-box-shadow: 0 0 120px #132F53;
+              box-shadow: 0 0 120px #132F53;
+    }
+  }
+  button.roundongoing__button--rock{
+    background-image: url("/images/rock.png");
+  }
+  button.roundongoing__button--paper{
+    background-image: url("/images/paper.png");
+  }
+  button.roundongoing__button--scissors{
+    background-image: url("/images/scissors.png");
+  }
+  button.roundongoing__button--lizard{
+    background-image: url("/images/lizard.png");
+  }
+  button.roundongoing__button--spock{
+    background-image: url("/images/spock.png");
   }
 }
-.scoretracker__round--player{
-  display: inline-block;
-  margin: 20px 10px 10px;
-  span{
-    display: inline-block;
-    background: $player-color;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    vertical-align: middle;
 
-    -webkit-box-shadow: 0 0 10px $player-color;
-       -moz-box-shadow: 0 0 10px $player-color;
-            box-shadow: 0 0 10px $player-color;
-
-    -webkit-border-radius: 20px;
-       -moz-border-radius: 20px;
-  }
+div.roundover{
+  margin: 20px;
+  text-align: center;
 }
-.scoretracker__round--computer{
-  display: inline-block;
-  margin: 20px 10px 10px;
-  span{
-    display: inline-block;
-    background: $computer-color;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    vertical-align: middle;
 
-    -webkit-box-shadow: 0 0 10px $computer-color;
-       -moz-box-shadow: 0 0 10px $computer-color;
-            box-shadow: 0 0 10px $computer-color;
-
-    -webkit-border-radius: 20px;
-       -moz-border-radius: 20px;
+// Results CSS
+div.results{
+  div.results__message{
+      margin: 20px;
+      text-align: center;
   }
 }

@@ -30,4 +30,4 @@ Victory conditions were coded as an object, so that the way the code works is cl
 
 I considered not having an intermediary screen for each round- but I chose to have one just to display computer results more obviously. I think not having an intermediary screen is a better decision in terms of playing the game, and is more 'fun'. But as this project isn't to make a game for others' 'fun'...
 
-I actually also considered writing all the "Paper beats rock", "Lizard poisons Spock"... but I felt that it was time consuming to write and not really challenging - though it is a significant game quality improvement.
+I actually also considered writing all the "Paper beats rock", "Lizard poisons Spock"... but I felt that it was time consuming to write and not really challenging - though it is a significant game quality improvement due to it providing more feedback to the player. For the same reason the rules are simply a copy-pasted wikipedia section with no cool diagram.
