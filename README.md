@@ -34,4 +34,6 @@ I actually also considered writing all the "Paper beats rock", "Lizard poisons S
 
 Since it's possible to navigate to the results page without playing a game.... it just catches you now and tells you go go back to the home page.
 
-The styling is quite rudimentary, but I did make some traffic lights for the game score. I didn't play around with ngAnimate, but it probably would feel better and more alive if I just animated a fade in or a sweep in for each page.
+The styling is quite rudimentary, but I did make some traffic lights for the game score. I didn't play around with ngAnimate, but it probably would feel better and more alive if I just animated a fade in or a sweep in for each page. I often lean on at least an image to provide a lot more depth to the page, which I haven't done in this case, but probably wouldn't take a massive overhaul of the page. I admit I didn't have a real vision for how this page should look, aside from steelish bluish (which is how I imagine the Enterprise's colours should be)- sorry. On reflection maybe I should have made it more like a console and did some whacky thing where it feels like a M.U.D. on a telnet client- which would have probably been a lot more work.
+
+Since the game results are in a closure due to the fact it's AngularJS, and the computer's move is only generated after a user's input is determined, I'm not sure there's a way to cheat the game. At least I can't figure out a way.
