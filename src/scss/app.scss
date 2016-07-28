@@ -65,80 +65,49 @@ div.scoretracker{
     right: 0;
     bottom: 0;
   }
-  .scoretracker__round--unplayed{
+  div.scoretracker__round{
     display: inline-block;
     margin: 20px 10px 10px;
     span{
       display: inline-block;
-      background: $unplayed-color;
       width: 20px;
       height: 20px;
       text-align: center;
       vertical-align: middle;
-
+      -webkit-border-radius: 80px;
+      -moz-border-radius: 80px;
+    }
+  }
+  div.scoretracker__round--unplayed{
+    span{
+      background: $unplayed-color;
       -webkit-box-shadow: 0 0 40px $unplayed-color;
          -moz-box-shadow: 0 0 40px $unplayed-color;
               box-shadow: 0 0 40px $unplayed-color;
-
-      -webkit-border-radius: 80px;
-         -moz-border-radius: 80px;
     }
   }
-  .scoretracker__round--active{
-    display: inline-block;
-    margin: 20px 10px 10px;
+  div.scoretracker__round--active{
     span{
-      display: inline-block;
       background: $active-color;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      vertical-align: middle;
-
       -webkit-box-shadow: 0 0 40px $active-color;
          -moz-box-shadow: 0 0 40px $active-color;
               box-shadow: 0 0 40px $active-color;
-
-      -webkit-border-radius: 80px;
-         -moz-border-radius: 80px;
     }
   }
-  .scoretracker__round--player{
-    display: inline-block;
-    margin: 20px 10px 10px;
+  div.scoretracker__round--player{
     span{
-      display: inline-block;
       background: $player-color;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      vertical-align: middle;
-
       -webkit-box-shadow: 0 0 40px $player-color;
          -moz-box-shadow: 0 0 40px $player-color;
               box-shadow: 0 0 40px $player-color;
-
-      -webkit-border-radius: 80px;
-         -moz-border-radius: 80px;
     }
   }
-  .scoretracker__round--computer{
-    display: inline-block;
-    margin: 20px 10px 10px;
+  div.scoretracker__round--computer{
     span{
-      display: inline-block;
       background: $computer-color;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      vertical-align: middle;
-
       -webkit-box-shadow: 0 0 40px $computer-color;
          -moz-box-shadow: 0 0 40px $computer-color;
               box-shadow: 0 0 40px $computer-color;
-
-      -webkit-border-radius: 80px;
-         -moz-border-radius: 80px;
     }
   }
 }

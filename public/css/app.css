@@ -64,80 +64,47 @@ div.scoretracker button.scoretracker__reset {
   bottom: 0;
 }
 
-div.scoretracker .scoretracker__round--unplayed {
+div.scoretracker div.scoretracker__round {
   display: inline-block;
   margin: 20px 10px 10px;
 }
 
-div.scoretracker .scoretracker__round--unplayed span {
+div.scoretracker div.scoretracker__round span {
   display: inline-block;
-  background: white;
   width: 20px;
   height: 20px;
   text-align: center;
   vertical-align: middle;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+}
+
+div.scoretracker div.scoretracker__round--unplayed span {
+  background: white;
   -webkit-box-shadow: 0 0 40px white;
   -moz-box-shadow: 0 0 40px white;
   box-shadow: 0 0 40px white;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
 }
 
-div.scoretracker .scoretracker__round--active {
-  display: inline-block;
-  margin: 20px 10px 10px;
-}
-
-div.scoretracker .scoretracker__round--active span {
-  display: inline-block;
+div.scoretracker div.scoretracker__round--active span {
   background: yellow;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
   -webkit-box-shadow: 0 0 40px yellow;
   -moz-box-shadow: 0 0 40px yellow;
   box-shadow: 0 0 40px yellow;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
 }
 
-div.scoretracker .scoretracker__round--player {
-  display: inline-block;
-  margin: 20px 10px 10px;
-}
-
-div.scoretracker .scoretracker__round--player span {
-  display: inline-block;
+div.scoretracker div.scoretracker__round--player span {
   background: green;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
   -webkit-box-shadow: 0 0 40px green;
   -moz-box-shadow: 0 0 40px green;
   box-shadow: 0 0 40px green;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
 }
 
-div.scoretracker .scoretracker__round--computer {
-  display: inline-block;
-  margin: 20px 10px 10px;
-}
-
-div.scoretracker .scoretracker__round--computer span {
-  display: inline-block;
+div.scoretracker div.scoretracker__round--computer span {
   background: red;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
   -webkit-box-shadow: 0 0 40px red;
   -moz-box-shadow: 0 0 40px red;
   box-shadow: 0 0 40px red;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
 }
 
 div.roundongoing p {
